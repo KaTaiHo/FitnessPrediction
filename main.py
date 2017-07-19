@@ -43,5 +43,5 @@ def run(file_name):
 		plt.plot(x[i][0], x[i][1], colors[labels[i]], markersize = 10)
 
 	plt.scatter(centroids[:, 0], centroids[:, 1], marker = "x", s=150, linewidths = 5, zorder= 10)
-	plt.savefig(file_name[:7])
+	plt.savefig(file_name.replace('.xls',''))
 
