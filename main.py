@@ -11,7 +11,7 @@ import os
 def run(file_name):
 	data_array = []
 
-	wb = xlrd.open_workbook(os.path.dirname(os.path.realpath(__file__)) + '\\' + str(file_name))
+	wb = xlrd.open_workbook(os.path.dirname(os.path.realpath(__file__)) + '//' + str(file_name))
 	sheet = wb.sheet_by_index(0)
 
 	for rowx in range(1, sheet.nrows, 1):
@@ -27,7 +27,7 @@ def run(file_name):
 
 	x = np.array(data_array)
 
-	kmeans = KMeans(n_clusters=2)
+	kmeans = KMeans(n_clusters=3)
 	kmeans.fit(x)
 
 	centroids = kmeans.cluster_centers_
@@ -36,7 +36,7 @@ def run(file_name):
 	print(centroids)
 	print(labels)
 
-	colors = ['g.','r.']
+	colors = ['g.','r.', 'y.']
 
 	for i in range(len(x)):
 		print('coordinate:', x[i])
