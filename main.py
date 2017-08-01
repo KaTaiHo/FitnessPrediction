@@ -45,3 +45,5 @@ def run(file_name):
 	plt.scatter(centroids[:, 0], centroids[:, 1], marker = "x", s=150, linewidths = 5, zorder= 10)
 	plt.savefig(file_name.replace('.xls',''))
 
+def aggregate_data():
+    pass
